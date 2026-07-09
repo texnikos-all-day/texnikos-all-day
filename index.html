@@ -1,162 +1,279 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screw Chiller 24/7 | Industrial Cooling & HVAC Athens</title>
+    <style>
+        :root {
+            --primary-color: #0b3c5d;
+            --secondary-color: #328cc1;
+            --accent-color: #d9b310;
+            --dark-color: #1d2731;
+            --light-color: #f9f9f9;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-<title>Screw Chiller 24/7 | Industrial Cooling & HVAC Athens</title>
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
 
-<meta name="description" content="Εξειδικευμένος HVAC Contractor στην Αθήνα. Συντήρηση βιομηχανικών ψυκτών (Screw Chillers), Fan Coil, VRV & κλιματισμού ξενοδοχείων. Συμβόλαια τεχνικής υποστήριξης 24/7.">
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-<link rel="canonical" href="https://screw-chiller-247.github.io/index.html">
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Industrial HVAC & Chiller Maintenance",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Screw Chiller 24/7",
-    "telephone": "+306906385390",
-    "email": "gewrgknick@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Αθήνα",
-      "addressCountry": "GR"
-    }
-  },
-  "areaServed": "Attica",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Industrial Services",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Screw Chiller Maintenance" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fan Coil Unit Service" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hotel HVAC Contracts" } }
-    ]
-  }
-}
-</script>
+        .brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
 
-<script src="https://cdn.tailwindcss.com"></script>
+        .phone-link {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
 
-<style>
-body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; scroll-behavior: smooth; }
-.b2b-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
-.contract-card { border-left: 5px solid #dc2626; transition: 0.3s; }
-.contract-card:hover { transform: translateX(10px); }
-</style>
+        .phone-link:hover {
+            background-color: white;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(11, 60, 93, 0.85), rgba(29, 39, 49, 0.85)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+
+        .brands-bar {
+            background-color: #eee;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #555;
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: var(--primary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .features-list {
+            list-style: none;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .nav-links {
+            background: #2d3748;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .header-container { flex-direction: column; gap: 10px; }
+        }
+    </style>
 </head>
+<body>
 
-<body class="bg-slate-50 text-slate-900 pb-20">
-
-<div class="bg-slate-900 text-white py-2 px-4 text-sm flex justify-center md:justify-between items-center sticky top-0 z-50">
-    <div class="hidden md:block font-medium">Professional HVAC Services & Industrial Cooling</div>
-    <div class="font-bold tracking-wider">📞 Τεχνική Υποστήριξη: <a href="tel:+306906385390" class="text-red-500 underline">690 638 5390</a></div>
-</div>
-
-<header class="b2b-gradient text-white py-24 px-6 text-center shadow-2xl">
-    <div class="max-w-5xl mx-auto">
-        <h1 class="text-4xl md:text-7xl font-black mb-6 uppercase italic tracking-tighter leading-none">
-            Industrial Chiller Maintenance & HVAC Solutions
-        </h1>
-        <p class="text-xl md:text-2xl font-light text-blue-200 mb-10 max-w-3xl mx-auto uppercase tracking-wide">
-            Τεχνική Υποστήριξη Βιομηχανικών Εγκαταστάσεων, Ξενοδοχείων & Επαγγελματικών Κτιρίων στην Αθήνα.
-        </p>
-        <div class="flex flex-wrap justify-center gap-6">
-            <a href="tel:+306906385390" class="bg-red-600 hover:bg-red-700 text-white px-12 py-5 rounded-xl font-black text-2xl shadow-xl transition-all uppercase italic">
-                Ζητήστε Προσφορά
-            </a>
+    <header>
+        <div class="header-container">
+            <a href="https://screw-chiller-247.github.io/" class="brand">Screw Chiller 24/7</a>
+            <a href="tel:6906385390" class="phone-link">📞 Τεχνική Υποστήριξη: 6906385390</a>
         </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Industrial Chiller Maintenance & HVAC Solutions</h1>
+            <p>Τεχνική Υποστήριξη Βιομηχανικών Εγκαταστάσεων, Ξενοδοχείων & Επαγγελματικών Κτιρίων στην Αθήνα.</p>
+            <a href="tel:6906385390" class="cta-btn">Ζητήστε Προσφορά</a>
+        </div>
+    </section>
+
+    <div class="brands-bar">
+        DAKIN CARRIER TRANE YORK MITSUBISHI CLIVET
     </div>
-</header>
 
-<div class="bg-white border-b py-6 overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 opacity-50 grayscale font-black text-xl text-slate-400 tracking-widest uppercase">
-        DAIKIN CARRIER TRANE YORK MITSUBISHI CLIVET
-    </div>
-</div>
-
-<section class="max-w-6xl mx-auto px-4 py-20">
-    <div class="grid lg:grid-cols-2 gap-16 items-start">
-
-        <div>
-            <h2 class="text-3xl font-black text-blue-900 mb-8 uppercase italic">Εξειδικευμένος HVAC Contractor</h2>
-            <p class="text-lg text-slate-700 leading-relaxed mb-6">
-                Η <strong>Screw Chiller 24/7</strong> εξειδικεύεται στη μελέτη, συντήρηση και επισκευή μεγάλων ψυκτικών μονάδων. 
-                Αναλαμβάνουμε <strong>Screw Chillers</strong>, συστήματα <strong>Fan Coil (FCU)</strong>, <strong>VRV/VRF</strong> και κεντρικό κλιματισμό με γνώμονα τη μέγιστη ενεργειακή απόδοση.
-            </p>
-
-            <div class="space-y-4">
-                <div class="contract-card bg-white p-6 shadow-sm">
-                    <h3 class="font-bold text-xl text-blue-800 uppercase mb-2 italic">Συμβόλαια Συντήρησης (SLA)</h3>
-                    <p class="text-slate-600">Προσαρμοσμένα προγράμματα προληπτικής συντήρησης για την αποφυγή δαπανηρών διακοπών λειτουργίας.</p>
-                </div>
-                <div class="contract-card bg-white p-6 shadow-sm">
-                    <h3 class="font-bold text-xl text-blue-800 uppercase mb-2 italic">Industrial Chiller Service</h3>
-                    <p class="text-slate-600">Εξειδίκευση σε κοχλιοφόρους συμπιεστές, εναλλάκτες θερμότητας και ψυκτικά κυκλώματα υψηλής ισχύος.</p>
-                </div>
-                <div class="contract-card bg-white p-6 shadow-sm">
-                    <h3 class="font-bold text-xl text-blue-800 uppercase mb-2 italic">Συστήματα Fan Coil</h3>
-                    <p class="text-slate-600">Ολοκληρωμένη συντήρηση, χημικός καθαρισμός και επισκευή μονάδων Fan Coil για άριστη απόδοση και ποιότητα αέρα.</p>
-                </div>
+    <section class="section">
+        <h2 class="section-title">Εξειδικευμένος HVAC Contractor</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Συμβόλαια Συντήρησης (SLA)</h3>
+                <p>Προσαρμοσμένα προγράμματα προληπτικής συντήρησης για την αποφυγή δαπανηρών διακοπών λειτουργίας.</p>
+            </div>
+            <div class="card">
+                <h3>Industrial Chiller Service</h3>
+                <p>Εξειδίκευση σε κοχλιοφόρους συμπιεστές, εναλλάκτες θερμότητας και ψυκτικά κυκλώματα υψηλής ισχύος.</p>
             </div>
         </div>
+    </section>
 
-        <div class="bg-red-50 p-10 rounded-3xl border-2 border-red-100 shadow-inner">
-            <h2 class="text-2xl font-black text-red-700 mb-6 uppercase">Service για Ξενοδοχεία & Επιχειρήσεις</h2>
-            <p class="text-slate-700 mb-8 font-medium">
-                Εξασφαλίζουμε την άνεση των πελατών σας και την απρόσκοπτη λειτουργία της παραγωγής σας. 
-            </p>
-            <ul class="font-bold text-slate-800 space-y-4 mb-8">
-                <li class="flex items-center">✅ 24/7 Priority Τεχνική Κάλυψη</li>
-                <li class="flex items-center">✅ Πιστοποιημένοι Ψυκτικοί (Industrial Grade)</li>
-                <li class="flex items-center">✅ Άμεση Διαθεσιμότητα Ανταλλακτικών</li>
-                <li class="flex items-center">✅ Αναλυτικές Αναφορές Λειτουργίας (Reports)</li>
-            </ul>
-            <a href="tel:+306906385390" class="block text-center bg-blue-900 text-white py-5 rounded-xl font-bold text-xl uppercase tracking-widest">
-                Κλειστε Ραντεβου για Αυτοψια
-            </a>
+    <section class="section" style="background-color: #fff;">
+        <h2 class="section-title">Service για Ξενοδοχεία & Επιχειρήσεις</h2>
+        <p class="text-center" style="font-size: 18px; margin-bottom: 20px;">Εξασφαλίζουμε την άνεση των πελατών σας και την απρόσκοπτη λειτουργία της παραγωγής σας.</p>
+        <ul class="features-list">
+            <li>✅ 24/7 Priority Τεχνική Κάλυψη</li>
+            <li>✅ Πιστοποιημένοι Ψυκτικοί (Industrial Grade)</li>
+            <li>✅ Άμεση Διαθεσιμότητα Ανταλλακτικών</li>
+            <li>✅ Αναλυτικές Αναφορές Λειτουργίας (Reports)</li>
+        </ul>
+        <div class="text-center" style="margin-top: 30px;">
+            <a href="tel:6906385390" class="cta-btn" style="background-color: var(--accent-color); color: var(--dark-color);">Κλείστε Ραντεβού για Αυτοψία</a>
         </div>
+    </section>
 
-    </div>
-</section>
-
-<section class="bg-slate-100 py-12 px-4 text-center border-y">
-    <h3 class="text-sm font-bold text-slate-500 uppercase mb-6 tracking-widest">Εξειδικευμένες Υπηρεσίες Αθήνα</h3>
-    <div class="flex flex-wrap justify-center gap-4 text-blue-700 font-bold underline italic">
+    <div class="nav-links">
         <a href="https://screw-chiller-247.github.io/">Αρχική Σελίδα</a>
         <a href="service-aircondition.html">Service Air Condition</a>
         <a href="vrv-athina.html">Συστήματα VRV/VRF</a>
         <a href="screw-chillers-athina.html">Βιομηχανική Ψύξη</a>
     </div>
-</section>
 
-<section class="max-w-6xl mx-auto px-4 py-16">
-    <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201150.31599388338!2d23.58514108605553!3d37.990895470008544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd1f416043d1%3A0x400bd2ce2b98cb0!2sAthens!5e0!3m2!1sen!2sgr!4v1714520000000!5m2!1sen!2sgr" 
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-    </div>
-</section>
+    <footer>
+        <h3>Screw Chiller 24/7</h3>
+        <p>Industrial HVAC Specialist • 24/7 Technical Support Athens</p>
+        <p style="margin-top: 20px; font-size: 14px; color: #aaa;">© 2026 - Επαγγελματική Συντήρηση Κλιματισμού & Βιομηχανικής Ψύξης • Αττική</p>
+    </footer>
 
-<footer class="bg-slate-900 text-white py-20 px-4 text-center">
-    <div class="max-w-4xl mx-auto">
-        <p class="font-black text-3xl mb-4 italic tracking-tighter uppercase">Screw Chiller 24/7</p>
-        <p class="text-slate-400 mb-8 max-w-lg mx-auto uppercase text-xs tracking-widest font-bold">
-            HVAC Contractor & Industrial Cooling Systems • All Day Technical Support Athens
-        </p>
-        <div class="text-slate-500 text-xs">
-            © 2026 - Επαγγελματική Συντήρηση Κλιματισμού & Βιομηχανικής Ψύξης • Αττική
-        </div>
-    </div>
-</footer>
-
-<a href="tel:+306906385390" class="fixed bottom-8 right-8 bg-red-600 text-white px-6 py-4 rounded-full font-bold shadow-2xl z-50 flex items-center gap-2 hover:scale-110 transition-transform">
-    <span class="hidden md:inline">ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ</span> 📞
-</a>
+    <a href="tel:6906385390" class="floating-cta">ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ 📞</a>
 
 </body>
 </html>
